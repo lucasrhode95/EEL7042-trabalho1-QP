@@ -9,7 +9,7 @@ Cap = 500*T;
 %% PATAMARES DE CARGA
 Pd = [1.188; 2.960; 4.118];
 % GERAÇÃO FOTOVOLTAICA
-Pgsolar = [0 3.5 0];
+Pgsolar = [0; 3.5; 0];
 %% LIMITE DE POTÊNCIA MÁXIMA
 maxTermica = 7*T;
 maxBateria = 3*T;
@@ -21,7 +21,7 @@ Pgmin      = intercalar(minTermica, minBateria);
 %% CUSTOS DE GERAÇÃO
 aTermica = 5*T;
 bTermica = 2*T;
-aBateria = 0*T;
+aBateria = 0.00001*T;
 bBateria = 0*T;
 Q        = diag(intercalar(aTermica, aBateria));
 b        = intercalar(bTermica, bBateria);
@@ -43,8 +43,4 @@ Mat_hor = [
     0   148   0   428   0 168;
 ];
 
-
-
-
-%% CHUTE INICIAL
-Pg = (Pgmax + Pgmin)/2
+run
