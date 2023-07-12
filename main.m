@@ -21,7 +21,7 @@ Pgmin      = intercalar(minTermica, minBateria);
 %% CUSTOS DE GERAÇÃO
 aTermica = 5*T;
 bTermica = 2*T;
-aBateria = 0.00001*T;
+aBateria = 1e-9*T;
 bBateria = 0*T;
 Q        = diag(intercalar(aTermica, aBateria));
 b        = intercalar(bTermica, bBateria);
