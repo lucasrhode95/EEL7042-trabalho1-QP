@@ -47,5 +47,5 @@ end
 
 [pTermica pBateria] = desintercalar(x);
 
-printVetor("TERMICA=", pTermica);
-printVetor("BATERIA=", pBateria);
+printVetor("TERMICA", pTermica);
+printVetor("BATERIA", pBateria);
